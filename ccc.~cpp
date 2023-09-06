@@ -1,0 +1,181 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include <cmath>
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#include <math.h>
+
+#pragma hdrstop
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+#include "ccc.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+  String sa = Form1->Edit1->Text ;
+  String sb = Form1->Edit2->Text ;
+  float a = StrToFloat(sa) ;
+  float b = StrToFloat(sb) ;
+  float r = a+b;
+  String res = FloatToStr(r);
+  Form1->Edit3->Text = res;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+  String sa = Form1->Edit1->Text ;
+  String sb = Form1->Edit2->Text ;
+  float a = StrToFloat(sa) ;
+  float b = StrToFloat(sb) ;
+  float r = a-b;
+  String res = FloatToStr(r);
+  Form1->Edit3->Text = res;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+  String sa = Form1->Edit1->Text ;
+  String sb = Form1->Edit2->Text ;
+  float a = StrToFloat(sa) ;
+  float b = StrToFloat(sb) ;
+  float r = a*b;
+  String res = FloatToStr(r);
+  Form1->Edit3->Text = res;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+  String sa = Form1->Edit1->Text ;
+  String sb = Form1->Edit2->Text ;
+  float a = StrToFloat(sa) ;
+  float b = StrToFloat(sb) ;
+  float r = a/b;
+  String res = FloatToStr(r);
+  Form1->Edit3->Text = res;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button5Click(TObject *Sender)
+{
+  String sa = Form1->Edit1->Text;
+  int a = StrToInt(sa);
+
+  if (a>0){
+
+  int b;
+  int c = 1;
+  for(b =1; b<=a; b++){
+     c = c*b;
+  }
+  String sb = IntToStr (c);
+  Form1->Edit3->Text = sb;
+  }
+  else if (a==0){
+    String sb = 1;
+    Form1->Edit3->Text = sb;
+  }
+  else if (a<0){
+  String sb = "invalide";
+  Form1->Edit3->Text = sb;
+  }
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::Button7Click(TObject *Sender)
+{
+ String sa = Form1->Edit1->Text;
+ float a = StrToFloat(sa);
+ float b = a*a;
+ String sb = FloatToStr(b);
+ Form1->Edit3->Text = sb;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button8Click(TObject *Sender)
+{
+ String sa = Form1->Edit1->Text;
+ float a = StrToFloat(sa);
+ float b = a*a*a;
+ String sb = FloatToStr(b);
+ Form1->Edit3->Text = sb;
+}
+//---------------------------------------------------------------------------
+#include <cmath>
+
+void __fastcall TForm1::Button9Click(TObject *Sender)
+{
+ /*
+ String sa = Form1->Edit1->Text;
+ float a = StrToFloat(sa);
+ float b = sqrt(a);
+ String sb = FloatToStr(b);
+ Form1->Edit3->Text = sb;
+ */
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button6Click(TObject *Sender)
+{
+ String sa = Form1->Edit1->Text;
+ float a = StrToFloat(sa);
+ float b = (a*10)/100;
+ String sb = FloatToStr(b);
+ Form1->Edit3->Text = sb;        
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button15Click(TObject *Sender)
+{
+ Form1->Edit1->Text = "";
+ Form1->Edit2->Text = "";
+ Form1->Edit3->Text = "";
+}
+//---------------------------------------------------------------------------
+#include <cmath>
+
+void __fastcall TForm1::Button16Click(TObject *Sender)
+{
+ String sa = Form1->Edit1->Text;
+ int a = StrToInt(sa);
+ String sb = Form1->Edit2->Text;
+ double b = StrToInt(sb);
+ int c = pow(a,b);
+ String res = IntToStr(c);
+ Form1->Edit3->Text = res;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+
+void __fastcall TForm1::Button19Click(TObject *Sender)
+{
+   String sa = Form1->Edit1->Text ;
+  String sb = Form1->Edit2->Text ;
+  float a = StrToFloat(sa) ;
+  float b = StrToFloat(sb) ;
+  float r = a*b;
+  String res = FloatToStr(r);
+  Form1->Edit3->Text = res;
+}
+//---------------------------------------------------------------------------
+
+
